@@ -15,8 +15,10 @@ public class Recursion {
      *precondition: n is non-negative
      */
     public static int fib(int n){
-
+      return fib(n, 0, 1);
     }
+
+    
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(){
