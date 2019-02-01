@@ -46,6 +46,7 @@ public class Recursion {
       System.out.println(fib(4));
       System.out.println(fib(5));
       System.out.println(fib(6));
+      System.out.println(fib(7));
     }
 
 }
