@@ -38,7 +38,15 @@ public class Recursion {
     }
 
     private static ArrayList<Integer> makeAllSums(int n, int partialSum) {
-
+      ArrayList<Integer> sums = new ArrayList<Integer>();
+      if (n > 0) {
+        makeAllSums(n - 1, partialSum + n);
+        makeAllSums(n - 1, partialSum);
+      }
+      else {
+        sums.add(partialSum);
+      }
+      return sums;
     }
 
      /*
