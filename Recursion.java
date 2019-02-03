@@ -32,12 +32,16 @@ public class Recursion {
 
 
 
-    /*As Per classwork
-    public static ArrayList<Integer> makeAllSums(){
+    /*As Per classwork*/
+    public static ArrayList<Integer> makeAllSums(int n){
+      return makeAllSums(n, 0);
     }
-    */
 
+    private static ArrayList<Integer> makeAllSums(int n, int partialSum) {
 
+    }
+
+     /*
     public static void main(String[] args) {
       System.out.println(fib(0));
       System.out.println(fib(1));
@@ -48,5 +52,6 @@ public class Recursion {
       System.out.println(fib(6));
       System.out.println(fib(7));
     }
+    */
 
 }
