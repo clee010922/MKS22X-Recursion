@@ -9,12 +9,12 @@ public class Recursion {
 
     */
 
-    /*
-    public static double sqrt(double n, double tolerance){
 
+    public static double sqrt(double n, double tolerance){
+      return sqrt(n, n/2, tolerance);
     }
 
-    */
+
 
     /*Recursively find the n'th fibbonaci number in linear time
      *fib(0) = 1; fib(1) = 1; fib(5) = 5
