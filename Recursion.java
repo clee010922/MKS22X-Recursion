@@ -36,23 +36,23 @@ public class Recursion {
 
     /*As Per classwork*/
     public static ArrayList<Integer> makeAllSums(int n){
-      return makeAllSums(n, 0);
-    }
-
-    private static ArrayList<Integer> makeAllSums(int n, int partialSum) {
       ArrayList<Integer> sums = new ArrayList<Integer>();
-      if (n > 0) {
-        makeAllSums(n - 1, partialSum + n);
-        makeAllSums(n - 1, partialSum);
-      }
-      else {
-        sums.add(partialSum);
-      }
+      makeAllSums(n, 0, sums);
       return sums;
     }
 
-     /*
+    private static void makeAllSums(int n, int partialSum, ArrayList<Integer> sums) {
+      if (n > 0) {
+        makeAllSums(n - 1, partialSum + n, sums);
+        makeAllSums(n - 1, partialSum, sums);
+      }
+      if (n == 0) {
+        sums.add(partialSum);
+      }
+    }
+
     public static void main(String[] args) {
+      /*
       System.out.println(fib(0));
       System.out.println(fib(1));
       System.out.println(fib(2));
@@ -61,7 +61,8 @@ public class Recursion {
       System.out.println(fib(5));
       System.out.println(fib(6));
       System.out.println(fib(7));
+      */
+      System.out.println(makeAllSums(3));
     }
-    */
 
 }
