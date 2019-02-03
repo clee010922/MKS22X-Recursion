@@ -15,7 +15,7 @@ public class Recursion {
     }
 
     private static double sqrt(double n, double guess, double tolerance) {
-      if (guess * guess - n > tolerance) {
+      if (Math.abs(guess * guess - n) > tolerance) {
         return sqrt(n, (n / guess + guess) / 2, tolerance);
       }
       return guess;
@@ -70,6 +70,10 @@ public class Recursion {
       System.out.println(fib(7));
       */
       System.out.println(makeAllSums(3));
+      System.out.println(sqrt(100, 0.0001));
+      System.out.println(sqrt(0, 0.0001));
+      System.out.println(sqrt(81, 0.0001));
+      System.out.println(sqrt(2, 0.00000001));
     }
 
 }
