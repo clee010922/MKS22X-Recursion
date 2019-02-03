@@ -14,6 +14,13 @@ public class Recursion {
       return sqrt(n, n/2, tolerance);
     }
 
+    private static double sqrt(double n, double guess, double tolerance) {
+      if (guess * guess - n > tolerance) {
+        return sqrt(n, (n / guess + guess) / 2, tolerance);
+      }
+      return guess;
+    }
+
 
 
     /*Recursively find the n'th fibbonaci number in linear time
