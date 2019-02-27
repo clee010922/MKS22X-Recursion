@@ -60,7 +60,7 @@ public class Recursion {
 
     //testcase must be a valid index of your input/output array
     public static void testFib(int testcase){
-      recursion r = new recursion();
+      Recursion r = new Recursion();
       int[] input = {0,1,2,3,5,30};
       int[] output ={0,1,1,2,5,832040};
       int max = input.length;
@@ -92,7 +92,7 @@ public class Recursion {
 
     //testcase must be a valid index of your input/output array
     public static void testSqrt(int testcase){
-      recursion r = new recursion();
+      Recursion r = new Recursion();
       double[] input = {0.0,1.0, 2.0, 4.0, 7.0};
       double[] output = {0.0,1.0,1.4142135623730951,2.0,2.6457513110645907};
       int max = input.length;
@@ -121,6 +121,13 @@ public class Recursion {
       }
     }
 
+    public static boolean closeEnough(double a, double b){
+      if(a==0.0 && b==0.0)return true;
+      if(a==0.0)return b < 0.00000000001;
+      if(b==0.0)return a < 0.00000000001;
+      return Math.abs(a-b)/a < 0.0001;//This is the normal % difference allowed
+    }
+
     public static void main(String[] args) {
       /*
       System.out.println(fib(0));
@@ -143,12 +150,11 @@ public class Recursion {
       testFib(3);
       testFib(4);
       testFib(5);
-      testFib(6);
+      testSqrt(0);
       testSqrt(1);
       testSqrt(2);
       testSqrt(3);
       testSqrt(4);
-      testSqrt(9);
     }
 
 }
