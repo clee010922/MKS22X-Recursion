@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class Recursion {
+public class recursion {
     /*You may write additional private methods */
 
     /*Recursively find the sqrt using Newton's approximation
@@ -60,7 +60,7 @@ public class Recursion {
 
     //testcase must be a valid index of your input/output array
     public static void testFib(int testcase){
-      Recursion r = new Recursion();
+      recursion r = new recursion();
       int[] input = {0,1,2,3,5,30};
       int[] output ={0,1,1,2,5,832040};
       int max = input.length;
@@ -92,7 +92,7 @@ public class Recursion {
 
     //testcase must be a valid index of your input/output array
     public static void testSqrt(int testcase){
-      Recursion r = new Recursion();
+      recursion r = new recursion();
       double[] input = {0.0,1.0, 2.0, 4.0, 7.0};
       double[] output = {0.0,1.0,1.4142135623730951,2.0,2.6457513110645907};
       int max = input.length;
